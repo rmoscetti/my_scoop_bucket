@@ -17,13 +17,13 @@
   },
   "bin": [
     [
-      "Open PDF Studio.exe",
+      "open-pdf-studio.exe",
       "open-pdf-studio"
     ]
   ],
   "shortcuts": [
     [
-      "Open PDF Studio.exe",
+      "open-pdf-studio.exe",
       "Open PDF Studio"
     ]
   ],
