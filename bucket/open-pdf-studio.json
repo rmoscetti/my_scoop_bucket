@@ -15,6 +15,12 @@
       "/D=$dir"
     ]
   },
+  "uninstaller": {
+    "file": "uninstall.exe",
+    "args": [
+      "/S"
+    ]
+  },
   "bin": [
     [
       "open-pdf-studio.exe",
