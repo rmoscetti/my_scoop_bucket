@@ -28,10 +28,11 @@
     ]
   ],
   "checkver": "github",
-  "autoupdate": {
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/releases/download/v$version/Open.PDF.Studio_$version_x64_user-setup.exe"
+      "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/OpenAEC-Foundation/open-pdf-studio/releases/download/v$version/Open.PDF.Studio_$version_x64_user-setup.exe"
+            }
+        }
     }
-  }
 }
