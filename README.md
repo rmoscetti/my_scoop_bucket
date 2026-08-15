@@ -1,18 +1,6 @@
 # my_scoop_bucket
 
-A small Scoop bucket for Windows applications that I want to install and keep updated through Scoop.
-
-At the moment, the bucket is focused on [Open PDF Studio](https://github.com/OpenAEC-Foundation/open-pdf-studio).
-
-## Why Open PDF Studio?
-
-Open PDF Studio is an open-source PDF editor developed by the OpenAEC Foundation.
-
-It is especially interesting for technical and AEC workflows because, besides normal PDF annotation and editing, it includes features such as measurements, drawing comparison, redaction, page management and markup tools.
-
-I created this bucket because I could not find another publicly indexed Scoop manifest for the OpenAEC version of Open PDF Studio.
-
-The goal is simply to make it easy to install and update with Scoop.
+Personal Scoop bucket for Windows software and command-line tools that I want to install and keep updated through Scoop.
 
 ## Install
 
@@ -22,29 +10,54 @@ Add the bucket:
 scoop bucket add rmoscetti https://github.com/rmoscetti/my_scoop_bucket
 ```
 
-Then install Open PDF Studio:
+Then install a package:
 
 ```powershell
 scoop install rmoscetti/open-pdf-studio
+scoop install rmoscetti/markitdown
 ```
 
 ## Update
 
+Update Scoop and the installed packages:
+
 ```powershell
 scoop update
 scoop update open-pdf-studio
+scoop update markitdown
 ```
 
-The manifest uses Scoop's `checkver` and `autoupdate` support to follow upstream GitHub releases.
+The manifests use Scoop's `checkver` and `autoupdate` support where appropriate to track upstream releases.
 
 ## Available packages
 
-| Package           | Description                                                            |
-| ----------------- | ---------------------------------------------------------------------- |
-| `open-pdf-studio` | Open-source PDF editor and annotation tool from the OpenAEC Foundation |
+| Package           | Description                                                                           |
+| ----------------- | ------------------------------------------------------------------------------------- |
+| `open-pdf-studio` | Open-source PDF editor and annotation tool from the OpenAEC Foundation                |
+| `markitdown`      | Command-line tool from Microsoft for converting documents and other files to Markdown |
+
+## Open PDF Studio
+
+[Open PDF Studio](https://github.com/OpenAEC-Foundation/open-pdf-studio) is an open-source PDF editor developed by the OpenAEC Foundation.
+
+It provides PDF annotation and editing features aimed in particular at technical and AEC workflows, including measurements, drawing comparison, redaction, page management and markup tools.
+
+This bucket provides a Scoop manifest for the OpenAEC release of Open PDF Studio.
+
+The package is downloaded from the project's official GitHub releases.
+
+## MarkItDown
+
+[MarkItDown](https://github.com/microsoft/markitdown) is an open-source command-line tool for converting documents and other supported file formats to Markdown.
+
+The Scoop manifest uses `uv` to create an isolated Python environment and install MarkItDown together with its optional conversion dependencies.
+
+The `markitdown` command is exposed through Scoop after installation.
 
 ## Notes
 
-The application is downloaded directly from the official Open PDF Studio GitHub releases.
+This repository contains Scoop manifests only.
 
-This repository only contains the Scoop manifest and is not affiliated with the OpenAEC Foundation.
+The packaged software is maintained by its respective upstream projects.
+
+This repository is not affiliated with the OpenAEC Foundation or Microsoft.
