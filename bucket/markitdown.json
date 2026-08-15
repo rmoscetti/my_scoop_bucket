@@ -11,7 +11,7 @@
         "script": [
             "Push-Location $dir",
             "uv venv --python 3.13 venv",
-            "uv pip install --python \"$dir\\venv\\Scripts\\python.exe\" \".[all]\"",
+            "uv pip install --python \"$dir\\venv\\Scripts\\python.exe\" \".[all]\" \"markitdown-ocr==0.1.0\" \"openai\"",
             "Pop-Location"
         ]
     },
